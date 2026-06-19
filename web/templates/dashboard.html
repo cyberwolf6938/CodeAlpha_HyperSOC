@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>HyperSOC</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="header-bar">
+    <h1>HyperSOC AI Security Operations Center</h1>
+    <div class="status">
+        🟢 MONITORING
+    </div>
+</div>
+
+<!-- ========================= -->
+
+<!-- TOP OVERVIEW -->
+
+<!-- ========================= -->
+
+<div class="dashboard-grid">
+
+<div class="card">
+    <h2>Current Time</h2>
+    <div id="clock"></div>
+</div>
+
+<div class="card">
+    <h2>Total Packets</h2>
+    <h1 id="packets">0</h1>
+</div>
+
+<div class="card">
+    <h2>Threat Score</h2>
+    <h1 id="score">0</h1>
+</div>
+
+<div class="card">
+    <h2>Alerts</h2>
+    <h1 id="alerts">0</h1>
+</div>
+
+<div class="card">
+    <h2>Risk Meter</h2>
+    <progress
+        id="riskMeter"
+        value="0"
+        max="100"
+        style="width:100%">
+    </progress>
+</div>
+
+</div>
+
+<!-- ========================= -->
+
+<!-- SOC COMMAND CENTER -->
+
+<!-- ========================= -->
+
+<div class="dashboard-row">
+
+<div class="card">
+    <h2>Severity Overview</h2>
+    <ul id="severityList"></ul>
+</div>
+
+<div class="card">
+    <h2>Threat Categories</h2>
+    <ul id="categories"></ul>
+</div>
+
+</div>
+
+<div class="dashboard-row">
+
+<div class="card">
+    <h2>MITRE ATT&CK Mapping</h2>
+    <ul id="mitreList"></ul>
+</div>
+
+<div class="card">
+    <h2>Analyst Summary</h2>
+    <div id="analystSummary">
+        Waiting For Data...
+    </div>
+</div>
+
+</div>
+
+<!-- ========================= -->
+
+<!-- ATTACK ANALYSIS -->
+
+<!-- ========================= -->
+
+<div class="card">
+
+<h2>Top Attackers</h2>
+
+<div class="attacker-chart-container">
+    <canvas id="attackerChart"></canvas>
+</div>
+
+</div>
+
+<div class="dashboard-row">
+
+<div class="card">
+    <h2>Top Talkers</h2>
+    <ul id="talkers"></ul>
+</div>
+
+<div class="card">
+    <h2>Recent Alerts</h2>
+    <ul id="recent"></ul>
+</div>
+
+</div>
+
+<!-- ========================= -->
+
+<!-- MAIN SHOWCASE -->
+
+<!-- ========================= -->
+
+<div class="card network-card">
+
+<h2>Network Highway</h2>
+
+<canvas
+    id="networkCanvas"
+    width="1200"
+    height="500">
+</canvas>
+
+</div>
+
+<!-- ========================= -->
+
+<!-- ANALYTICS -->
+
+<!-- ========================= -->
+
+<div class="dashboard-row">
+
+<div class="card">
+
+    <h2>Protocols</h2>
+
+    <div style="height:250px;">
+        <canvas id="protocolChart"></canvas>
+    </div>
+
+</div>
+
+<div class="card">
+
+    <h2>Incident Timeline</h2>
+
+    <ul id="timeline"></ul>
+
+</div>
+
+</div>
+
+<!-- ========================= -->
+
+<!-- REPORTING -->
+
+<!-- ========================= -->
+
+<div class="dashboard-row">
+
+<div class="card">
+
+    <h2>Evidence</h2>
+
+    <div id="evidence">
+        No Evidence Yet
+    </div>
+
+</div>
+
+<div class="card">
+
+    <h2>Reports</h2>
+
+    <button onclick="exportReport()">
+        Export JSON Report
+    </button>
+
+</div>
+
+</div>
+
+<!-- ========================= -->
+
+<!-- RAW PACKETS -->
+
+<!-- ========================= -->
+
+<div class="card">
+
+<h2>Live Traffic</h2>
+
+<table id="traffic"></table>
+
+</div>
+
+<div class="footer">
+    HyperSOC v1.0 | AI Powered SOC Platform
+    <br>
+    Made By CYBERWOLF
+</div>
+
+<script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+
+<script src="{{ url_for('static', filename='network_map.js') }}"></script>
+
+</body>
+
+</html>
