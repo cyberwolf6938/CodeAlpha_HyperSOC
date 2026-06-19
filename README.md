@@ -150,7 +150,7 @@ HyperSOC/
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/HyperSOC.git
+git https://github.com/cyberwolf6938/CodeAlpha_HyperSOC.git
 cd HyperSOC
 ```
 
@@ -179,7 +179,8 @@ pip install -r requirements.txt
 ### 4. Run HyperSOC
 
 ```bash
-python main.py
+For CLI only - python main.py
+For UI - python web/app.py
 ```
 
 ### 5. Open Dashboard
