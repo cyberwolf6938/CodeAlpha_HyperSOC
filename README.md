@@ -209,7 +209,7 @@ http://YOUR_LOCAL_IP:5000
 
 ### MITRE ATT&CK Mapping
 
-![MITRE](screenshots/mitreatt&ck.png)
+![MITRE](screenshots/mitre att&ck.png)
 
 ### Live Traffic
 
