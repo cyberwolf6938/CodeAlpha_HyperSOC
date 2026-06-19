@@ -197,23 +197,23 @@ http://YOUR_LOCAL_IP:5000
 
 ---
 
-## Screenshots
+## Dashboard Preview
 
 ### Main Dashboard
 
-Add screenshot here
+![Dashboard](screenshots/dashboard.png)
 
-### Network Highway Visualization
+### Network Highway
 
-Add screenshot here
+![Network Highway](screenshots/network.png)
 
 ### MITRE ATT&CK Mapping
 
-Add screenshot here
+![MITRE](screenshots/mitreatt&ck.png)
 
-### Threat Analytics
+### Live Traffic
 
-Add screenshot here
+![Live Traffic](screenshots/livetraffic.png)
 
 ---
 
